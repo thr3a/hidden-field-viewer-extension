@@ -20,12 +20,12 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
   if(changeInfo.status === 'loading') {
     list[tabId] = null;
+    chrome.browserAction.setBadgeText({
+      tabId: tabId,
+      text: '0'
+    });
+    chrome.browserAction.setBadgeBackgroundColor({color: '#cce5ff'});
   }
-  chrome.browserAction.setBadgeText({
-    tabId: tabId,
-    text: `${tabId}`
-  });
-  console.log(tabId);
 });
 
 chrome.tabs.onRemoved.addListener(function(tabId) {
