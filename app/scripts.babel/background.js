@@ -18,6 +18,9 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 });
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
+  if(changeInfo.status === 'loading') {
+    list[tabId] = null;
+  }
   chrome.browserAction.setBadgeText({
     tabId: tabId,
     text: `${tabId}`
@@ -25,3 +28,6 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
   console.log(tabId);
 });
 
+chrome.tabs.onRemoved.addListener(function(tabId) {
+  list[tabId] = null;
+});
