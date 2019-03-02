@@ -5,6 +5,11 @@ var list = {};
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   if(message.action === 'SEND_ELMS') {
     list[message.tabid] = message.elms;
+    chrome.browserAction.setBadgeText({
+      tabId: message.tabid,
+      text: `${message.elms.length}`
+    });
+    chrome.browserAction.setBadgeBackgroundColor({color: '#ff5656'});
   }
 
   if (message.action === 'GET_TABID') {
