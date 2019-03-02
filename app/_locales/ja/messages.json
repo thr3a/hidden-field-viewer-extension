@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Hidden field viewer",
+    "description": "サイト内のHidden要素を可視化します。"
+  },
+  "appDescription": {
+    "message": "Hidden field viewer",
+    "description": "サイト内のHidden要素を可視化します。"
+  }
+}

@@ -7,7 +7,7 @@
     "16": "images/icon-16.png",
     "128": "images/icon-128.png"
   },
-  "default_locale": "en",
+  "default_locale": "ja",
   "background": {
     "scripts": [
       "scripts/background.js"
@@ -15,16 +15,13 @@
   },
   "permissions": [
     "tabs",
-    "http://*/*",
-    "https://*/*",
-    "background",
-    "storage"
+    "<all_urls>",
+    "background"
   ],
   "content_scripts": [
     {
       "matches": [
-        "http://*/*",
-        "https://*/*"
+        "<all_urls>"
       ],
       "js": [
         "scripts/contentscript.js"

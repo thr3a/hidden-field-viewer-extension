@@ -1,10 +1,10 @@
 {
   "appName": {
-    "message": "hidden_field_viewer",
-    "description": "The name of the application"
+    "message": "Hidden field viewer",
+    "description": "Find hidden elements in the site and make them visible."
   },
   "appDescription": {
-    "message": "My Chrome Extension",
-    "description": "The description of the application"
+    "message": "Hidden field viewer",
+    "description": "Find hidden elements in the site and make them visible."
   }
 }
