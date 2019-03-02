@@ -1,4 +1,25 @@
 body {
-  padding: 20px;
-  width: 400px;
+  padding: 5px;
+  width: 600px;
+  background-color: #f8f8f8;
+}
+
+th,td {
+  border: solid 1px;
+}
+
+th {
+  padding: 3px;
+}
+
+td {
+  padding: 10px;
+  word-break : break-all;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background-color: #fff;
 }
